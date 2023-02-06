@@ -11,7 +11,6 @@ int main()
 {
     // initializing the elements
     vector<int> arr = {1, 2, 3, 4, 5, 6, 7, 8, 9};
-    vector<int> arrit = {1, 2, 3, 4, 5, 6, 7, 8, 9};
     vector<int> placeholder{};
     //All possible combinations of pairs of 2 numbers from above:
     vector<pair<int,int>> couples{};
@@ -27,4 +26,6 @@ int main()
     for (pair<int,int>& i : couples){
         cout << i.first << " " << i.second << "\n";
     }
+    //Bruteforcing
+    for (int i = 9; i )
 }
