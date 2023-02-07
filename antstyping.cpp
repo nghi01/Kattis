@@ -33,7 +33,7 @@ int main()
     // }
     //Bruteforcing
     do {
-        display(arr, 8);
+        display(arr, 9);
     } while (next_permutation(arr.begin(), arr.end()));
     return 0;
 }
