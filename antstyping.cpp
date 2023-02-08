@@ -13,25 +13,22 @@ void display(vector<int> a, int n){
     cout << endl;
 }
 
+void getIndex(vector<int> v, int K)
+{
+    vector<int>::iterator it;
+    it = find(v.begin(), v.end(), K);
+  
+    // If element is found
+    if (it != v.end()) 
+    {
+        int index = it - v.begin();
+        return index;
+    }
+}
 int main()
 {
     // initializing the elements
     vector<int> arr = {1, 2, 3, 4, 5, 6, 7, 8, 9};
-    //All possible combinations of pairs of 2 numbers from above:
-    // vector<pair<int,int>> couples{};
-    // for (int i = 9; i > 0; i--){
-    //     for (int j = i - 1; j > 0; j--){
-    //         pair <int, int> p;
-    //         p.first = i;
-    //         p.second = j;
-    //         couples.push_back(p);
-    //     }
-    // }
-    // // Print to check
-    // for (pair<int,int>& i : couples){
-    //     cout << i.first << " " << i.second << "\n";
-    // }
-    //Bruteforcing
     do {
         display(arr, 9);
     } while (next_permutation(arr.begin(), arr.end()));
