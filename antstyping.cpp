@@ -39,14 +39,14 @@ int main()
     string sequence;
     int minSteps, transit, transits, count;
     cin >> sequence;
-    minSteps = 100;
+    minSteps = 100000;
     do {
-        transits = 0;
+        transits = getIndex(arr, StringToInt(sequence[0]));
         for (int i = 0; i < size(sequence) - 1; i++){
             transit = abs(getIndex(arr, StringToInt(sequence[i])) - getIndex(arr, StringToInt(sequence[i+1])));
             transits += transit;
         }
-        count = size(sequence) + 2 * transits;
+        count = size(sequence) + transits;
         if (count < minSteps){
             minSteps = count;
         }
